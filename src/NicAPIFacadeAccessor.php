@@ -17,7 +17,7 @@ class NicAPIFacadeAccessor
      */
     public static function get($name, $arguments = [])
     {
-        return app('nicapi.client')->get($name, $arguments = []);
+        return app('nicapi.client')->get($name, $arguments);
     }
 
     /**
@@ -28,7 +28,7 @@ class NicAPIFacadeAccessor
      */
     public static function post($name, $arguments = [])
     {
-        return app('nicapi.client')->post($name, $arguments = []);
+        return app('nicapi.client')->post($name, $arguments);
     }
 
     /**
@@ -40,7 +40,7 @@ class NicAPIFacadeAccessor
     public static function delete($name, $arguments = [])
     {
 
-        return app('nicapi.client')->delete($name, $arguments = []);
+        return app('nicapi.client')->delete($name, $arguments);
     }
 
     /**
@@ -51,7 +51,7 @@ class NicAPIFacadeAccessor
      */
     public static function put($name, $arguments = [])
     {
-        return app('nicapi.client')->put($name, $arguments = []);
+        return app('nicapi.client')->put($name, $arguments);
     }
 
 

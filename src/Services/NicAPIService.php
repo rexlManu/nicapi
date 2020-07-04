@@ -5,6 +5,7 @@ namespace rexlManu\NicAPI\Services;
 
 
 use rexlManu\NicAPI\Facades\NicAPI;
+use NicAPI\NicAPI as Api;
 
 class NicAPIService
 {
@@ -18,7 +19,7 @@ class NicAPIService
             $this->config = config('nicapi');
         }
 
-        \NicAPI\NicAPI::init($this->config['key'], $this->config['url']);
+        Api::init($this->config['key'], $this->config['url']);
     }
 
     /**
@@ -29,7 +30,7 @@ class NicAPIService
      */
     public function get($name, $arguments = [])
     {
-        return \NicAPI\NicAPI::get($name, $arguments);
+        return Api::get($name, $arguments);
     }
 
     /**
@@ -40,7 +41,7 @@ class NicAPIService
      */
     public function post($name, $arguments)
     {
-        return NicAPI::post($name, $arguments = []);
+        return Api::post($name, $arguments = []);
     }
 
     /**
@@ -52,7 +53,7 @@ class NicAPIService
     public function delete($name, $arguments = [])
     {
 
-        return NicAPI::delete($name, $arguments);
+        return Api::delete($name, $arguments);
     }
 
     /**
@@ -63,7 +64,7 @@ class NicAPIService
      */
     public function put($name, $arguments = [])
     {
-        return NicAPI::put($name, $arguments);
+        return Api::put($name, $arguments);
     }
 
 }
