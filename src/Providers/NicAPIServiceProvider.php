@@ -13,17 +13,24 @@ class NicAPIServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $source = realpath(__DIR__ . '../../config/nicapi.php');
-        $this->publishes([$source => config_path('nicapi.php')]);
-
-        $this->mergeConfigFrom($source, 'nicapi');
+        $this->publishes([
+            __DIR__ . '/../../config/nicapi.php' => config_path('nicapi.php'),
+        ]);
     }
 
     public function register()
     {
-        $this->app->singleton('nicapi', static function () {
-            return new NicAPIService();
+        $this->mergeConfigFrom(
+            __DIR__ . '/../../config/nicapi.php', 'nicapi'
+        );
+        $this->app->singleton('nicapi.client', static function () {
+            return new NicAPIService(config('nicapi'));
         });
+    }
+
+    public function provides()
+    {
+        return ['nicapi.client'];
     }
 
 }

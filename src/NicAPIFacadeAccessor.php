@@ -15,9 +15,9 @@ class NicAPIFacadeAccessor
      * @param $arguments for the endpoint
      * @return mixed the response
      */
-    public static function get($name, $arguments)
+    public static function get($name, $arguments = [])
     {
-        return NicAPI::get($name, $arguments);
+        return app('nicapi.client')->get($name, $arguments = []);
     }
 
     /**
@@ -26,9 +26,9 @@ class NicAPIFacadeAccessor
      * @param $arguments for the endpoint
      * @return mixed the response
      */
-    public static function post($name, $arguments)
+    public static function post($name, $arguments = [])
     {
-        return NicAPI::post($name, $arguments);
+        return app('nicapi.client')->post($name, $arguments = []);
     }
 
     /**
@@ -37,10 +37,10 @@ class NicAPIFacadeAccessor
      * @param $arguments for the endpoint
      * @return mixed the response
      */
-    public static function delete($name, $arguments)
+    public static function delete($name, $arguments = [])
     {
 
-        return NicAPI::delete($name, $arguments);
+        return app('nicapi.client')->delete($name, $arguments = []);
     }
 
     /**
@@ -49,9 +49,9 @@ class NicAPIFacadeAccessor
      * @param $arguments for the endpoint
      * @return mixed the response
      */
-    public static function put($name, $arguments)
+    public static function put($name, $arguments = [])
     {
-        return NicAPI::put($name, $arguments);
+        return app('nicapi.client')->put($name, $arguments = []);
     }
 
 
