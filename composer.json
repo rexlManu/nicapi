@@ -1,0 +1,30 @@
+{
+  "name": "rexlmanu/nicapi",
+  "description": "nicapi api client for laravel",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Emmanuel Lampe",
+      "email": "mail@emmanuel-lampe.de"
+    }
+  ],
+  "require": {
+    "php": "^7.1.3|^7.2",
+    "illuminate/support": "~5.1|~5.2|~5.3|~5.4|~5.5|~5.6|~5.7|~5.8|~6.0|~7.0",
+    "guzzlehttp/guzzle": "^6.5",
+    "nicapi/php-client": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "rexlManu\\NicAPI\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "rexlManu\\NicAPI\\Providers\\NicAPIServiceProvider"
+      ]
+    }
+  }
+}
