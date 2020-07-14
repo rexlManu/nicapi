@@ -39,9 +39,9 @@ class NicAPIService
      * @param $arguments for the endpoint
      * @return mixed the response
      */
-    public function post($name, $arguments)
+    public function post($name, $arguments = [])
     {
-        return Api::post($name, $arguments = []);
+        return Api::post($name, $arguments);
     }
 
     /**
