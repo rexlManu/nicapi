@@ -10,9 +10,6 @@
     }
   ],
   "require": {
-    "php": "*",
-    "illuminate/support": "*",
-    "guzzlehttp/guzzle": "*",
     "nicapi/php-client": "^1.0"
   },
   "autoload": {
